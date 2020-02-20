@@ -16,12 +16,14 @@ export default Store;
 이렇게 React.createContext(null)로 설정. 그리고 export default Store를 한다. 
 
 2.  그 다음, AppContainer.js 에서 
-`
+
+```
 import Store from "store"; //얘는 .env에 NODE_PATH = src라고 해줬기에 
 파일 경로를 귀찮게 다 명시할 필요가 없다. 
-`
+```
 를 해준 다음에, 
-`
+
+```
 render() {
     return (
       <Store.Provider value={this.state}>
@@ -29,5 +31,5 @@ render() {
       </Store.Provider>
     );
   }
-`
+```
 라는 Store.Provider를 사용하기.
