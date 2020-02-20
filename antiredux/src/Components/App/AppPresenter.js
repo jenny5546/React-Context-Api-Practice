@@ -10,6 +10,7 @@ const AppPresenter = () => (
     <Flex alignCenter full column>
       <Store.Consumer>
         {store => {
+          //Array가 아닌거를 map하는 방법. Object.keys 
           return Object.keys(store.notifications).map(key => (
             <Notification
               key={store.notifications[key].id}
@@ -19,6 +20,7 @@ const AppPresenter = () => (
             />
           ));
         }}
+
       </Store.Consumer>
     </Flex>
   </Fragment>
